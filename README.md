@@ -26,8 +26,8 @@ Execute the following commands in your terminal:
 
 ```bash
 # 1. Download the script
-git clone [YOUR_GITHUB_REPO_URL]
-cd [YOUR_REPO_NAME]
+git clone https://github.com/ShalyX/Gensyn-One-Click-Setup
+cd Gensyn-One-Click-Setup
 
 # 2. Make the script executable
 chmod +x setup_gensyn_node.sh
