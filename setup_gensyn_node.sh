@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuration ---
-REPO_URL="https://github.com/gensyn/rl-swarm.git"  # Official Gensyn repo (confirm this URL is correct before final deployment)
+REPO_URL="git@github.com:gensyn/rl-swarm.git"  # Official Gensyn repo (confirm this URL is correct before final deployment)
 REPO_DIR="rl-swarm"
 SCREEN_NAME="gensyn"
 
