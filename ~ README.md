@@ -1,4 +1,4 @@
-Gensyn One-Click RL Swarm Node Setup
+## Gensyn One-Click RL Swarm Node Setup
 
 Simplify your Gensyn Testnet experience.
 This utility script automates the full setup for the Gensyn RL Swarm node, eliminating 10+ manual commands for dependency installation, virtual environment setup, and session management.
