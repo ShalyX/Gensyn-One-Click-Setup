@@ -34,3 +34,22 @@ chmod +x setup_gensyn_node.sh
 
 # 3. Run the installer
 ./setup_gensyn_node.sh
+
+(The script will take several minutes to complete the full setup.)
+
+
+
+
+🟢 Running & Authentication
+Follow Prompts: After setup, the script will prompt you to install and run localtunnel. Do this in a new terminal window to get your public URL.
+
+Authenticate: Visit the public URL in your browser and complete the Gensyn login/Hugging Face authentication steps.
+
+Check Status: Return to your original terminal. Once authenticated, your node will begin processing tasks in the background.
+
+To re-attach to your node's logs, use:
+
+Bash
+
+screen -r gensyn
+Press Ctrl + A then D to detach safely.
