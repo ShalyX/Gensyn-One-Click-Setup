@@ -58,7 +58,7 @@ source .venv/bin/activate
 
 log_info "Installing Python and Node/Yarn dependencies..."
 # We'll try a common path used in this repository's structure
-pip install -r web/requirements.txt || log_error "Failed to install Python requirements."
+pip install -r rl-swarm/web/requirements.txt || log_error "Failed to install Python requirements."
 yarn install || log_error "Failed to install Yarn requirements."
 log_success "Virtual environment and dependencies fully installed."
 
