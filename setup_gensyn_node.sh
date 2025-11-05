@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuration ---
-REPO_URL="https://github.com/gensyn/rl-swarm.git"  # Official Gensyn repo (confirm this URL is correct before final deployment)
+REPO_URL="https://github.com/gensyn-ai/rl-swarm.git"  # Official Gensyn repo (confirm this URL is correct before final deployment)
 REPO_DIR="rl-swarm"
 SCREEN_NAME="gensyn"
 
@@ -47,8 +47,7 @@ if [ -d "$REPO_DIR" ]; then
 fi
 
 log_info "2/5: Cloning the Gensyn RL Swarm repository from $REPO_URL..."
-git clone --depth 1 "$REPO_URL" || log_error "Failed to clone repository. Check URL and network connection."
-cd "$REPO_DIR" || log_error "Failed to enter cloned directory."
+git clone "$REPO_URL" || log_error "Failed to clone repository. Check URL and network connection."cd "$REPO_DIR" || log_error "Failed to enter cloned directory."
 log_success "Repository cloned and entered."
 
 
