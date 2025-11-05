@@ -57,7 +57,8 @@ python3 -m venv .venv || log_error "Failed to create virtual environment."
 source .venv/bin/activate
 
 log_info "Installing Python and Node/Yarn dependencies..."
-pip install -r requirements.txt || log_error "Failed to install Python requirements."
+# We'll try a common path used in this repository's structure
+pip install -r web/requirements.txt || log_error "Failed to install Python requirements."
 yarn install || log_error "Failed to install Yarn requirements."
 log_success "Virtual environment and dependencies fully installed."
 
