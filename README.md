@@ -21,7 +21,7 @@ This utility script automates the full setup for the Gensyn RL Swarm node, elimi
   - Recommended **24GB RAM** minimum and a modern **CUDA-enabled GPU** (e.g., RTX 3090, A100).
   - CPU-only: `arm64` , `amd64` or `x86 CPU` with minimum **32GB RAM**
 * **Accounts:** A **Hugging Face Account** (you will need a Write-access token).
-  - Create account in [HuggingFace][https://huggingface.co/]
+  - Create account in [HuggingFace](https://huggingface.co/)
   - Create an Access Token with Write permissions here and save it
 
 ---
@@ -68,8 +68,6 @@ curl https://loca.lt/mytunnelpassword
 When you will see interface like this, you can detach from this screen session
 
 * To re-attach to your node's logs, use:
-
-Bash
 ```bash
 screen -r gensyn
 ```
