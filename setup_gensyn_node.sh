@@ -69,9 +69,11 @@ log_info "4/5: Starting Gensyn node in background screen session (name: $SCREEN_
 # Ensure any existing session is killed for a clean start
 screen -S "$SCREEN_NAME" -X quit > /dev/null 2>&1
 
-# Start the node and detach
-# The 'exec bash' keeps the screen session alive after the script finishes
-screen -dmS "$SCREEN_NAME" bash -c "source .venv/bin/activate; ./run_rl_swarm.sh; exec bash"
+# Make the execution script executable (still needed)
+chmod +x run_rl_swarm.sh || log_error "Failed to make run_rl_swarm.sh executable." 
+
+# Start the node and detach. We use 'cd' inside the screen's bash -c command.
+screen -dmS "$SCREEN_NAME" bash -c "cd $REPO_DIR; source .venv/bin/activate; ./run_rl_swarm.sh; exec bash" 
 
 log_success "Node started successfully in a detached screen session. You can re-attach using 'screen -r $SCREEN_NAME'."
 
