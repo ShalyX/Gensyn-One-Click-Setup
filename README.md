@@ -35,7 +35,7 @@ cd Gensyn-One-Click-Setup
 chmod +x setup_gensyn_node.sh
 
 # 3. Run the installer
-./setup_gensyn_node.sh ```
+./setup_gensyn_node.sh```
 
 (The script will take several minutes to complete the full setup.)
 
@@ -46,11 +46,11 @@ chmod +x setup_gensyn_node.sh
 * Follow Prompts: After setup, the script will prompt you to resume the tunnel screen. Do this in a new terminal window to get your public URL.
 
 ```bash
-screen -r lt_tunnel ```
+screen -r lt_tunnel```
 
 * Now use this command to get the password of this website
 ```bash
-curl https://loca.lt/mytunnelpassword ```
+curl https://loca.lt/mytunnelpassword```
 
 * Authenticate: Visit the public URL in your browser and complete the Gensyn login.
 * Sign In using email address and then paste OTP
