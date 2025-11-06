@@ -76,12 +76,39 @@ screen -dmS "$SCREEN_NAME" bash -c "source .venv/bin/activate; cd rl-swarm && ./
 log_success "Node started successfully in a detached screen session. You can re-attach using 'screen -r $SCREEN_NAME'."
 
 
+# --- 4B: AUTOMATE LOCALTUNNEL ---
+log_info "4B/5: Automating localtunnel setup and launch in the background..."
+
+# Install localtunnel globally (this needs sudo, so we run it outside of screen)
+sudo npm install -g localtunnel || log_error "Failed to install localtunnel globally."
+
+# Start localtunnel in a separate screen session (name: lt_tunnel)
+# lt --port 3000 runs forever and prints the URL
+SCREEN_LT_NAME="lt_tunnel"
+
+# Ensure any existing session is killed for a clean start
+screen -S "$SCREEN_LT_NAME" -X quit > /dev/null 2>&1
+
+# Start the tunnel and detach. We use 'exec bash' to keep the session alive.
+screen -dmS "$SCREEN_LT_NAME" bash -c "lt --port 3000; exec bash"
+
+log_success "Localtunnel started successfully in a separate screen session (name: $SCREEN_LT_NAME)."
+echo "----------------------------------------------------------------------"
+echo -e "\n\033[33mACTION REQUIRED: Your node is running, and the tunnel is active.\033[0m"
+echo -e "\033[33m1. To get your public login URL, re-attach to the tunnel session:\033[0m"
+echo -e "\033[33m   screen -r $SCREEN_LT_NAME\033[0m"
+echo -e "\n\033[33m2. The URL will be printed on the screen. Visit that URL to log in.\033[0m"
+echo "----------------------------------------------------------------------"
+log_success "Setup complete! Now go log in!"
+echo ""
+
+# The old Section 5 (Authentication Instructions) will be replaced by the log_success in 4B.
+
+
 # --- 5. Authentication Instructions (The Final Step) ---
 log_info "5/5: Node is running. FINAL STEP: Authentication/Login"
 echo "----------------------------------------------------------------------"
 echo -e "\n\033[33mACTION REQUIRED: Open a new, separate terminal tab NOW to set up the public login URL.\033[0m"
-echo -e "\033[33m1. Install localtunnel globally:\033[0m"
-echo -e "\033[33m   sudo npm install -g localtunnel\033[0m"
 echo -e "\n\033[33m2. Get your public URL (Node runs on port 3000):\033[0m"
 echo -e "\033[33m   lt --port 3000\033[0m"
 echo "----------------------------------------------------------------------"
