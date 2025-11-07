@@ -45,9 +45,10 @@ chmod +x setup_gensyn_node.sh
 (The script will take several minutes to complete the full setup.)
 
 
+---
 
 
-🟢 Running & Authentication
+## 🟢 Running & Authentication
 * Follow Prompts: After setup, the script will prompt you to resume the tunnel screen. 
 
 * Use this command to get the password of this website
@@ -70,6 +71,8 @@ screen -r lt_tunnel
 screen -r gensyn
 ```
 
+---
+
 * Respond to questions asked appropriately
 * `Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]` : Write Y and enter your access-token to join testnet OR press N to join without pushing models
 * `Enter the name of the model you want to use in huggingface repo/name format, or press [Enter] to use the default model`: For default model, press Enter or choose one of these:
@@ -81,6 +84,8 @@ screen -r gensyn
 * `Would you like to participate in the AI Prediction Market? (Y/n)`
 You would join the prediction market by pressing ENTER or answering Y 
 
+
+---
 
 * Press Ctrl + A then D to detach safely.
 * To resume `screen`
