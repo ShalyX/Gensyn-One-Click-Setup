@@ -70,6 +70,10 @@ screen -r lt_tunnel
 
 * Authenticate: Visit the public URL in your browser and complete the Gensyn login.
 * Sign In using email address and then paste OTP
+
+<img width="768" height="344" alt="image" src="https://github.com/user-attachments/assets/c8b60f08-915e-41a9-8eff-d8cb53e8ac8b" />
+
+  
 * Check Status: Return to your original terminal. Once authenticated, your node will begin processing tasks in the background.
 * To re-attach to your node's logs, use:
 ```bash
@@ -103,4 +107,7 @@ screen -r gensyn
 
 Once logged in, your node will begin training automatically.
 
-You can verify that your peer has successfully connected by visiting the [Gensyn Testnet Dashboard](dashboard.gensyn.ai). Your peer should appear in the active swarm list, and you can monitor training progress in real time.
+You can verify that your peer has successfully connected by visiting the [Gensyn Testnet Dashboard](https://dashboard.gensyn.ai). Your peer should appear in the active swarm list, and you can monitor training progress in real time.
+
+<img width="1398" height="973" alt="image" src="https://github.com/user-attachments/assets/3a20072a-9bea-4db4-961f-026309dc72e1" />
+
