@@ -1,3 +1,8 @@
+<img width="1910" height="947" alt="image" src="https://github.com/user-attachments/assets/466b2a15-6f14-4c2c-a58f-e27ce7a48ecc" />
+
+
+
+
 ## Gensyn One-Click RL Swarm Node Setup
 
 Simplify your Gensyn Testnet experience.
@@ -92,3 +97,10 @@ You would join the prediction market by pressing ENTER or answering Y
 ```bash
 screen -r gensyn
 ```
+---
+
+## Node Status
+
+Once logged in, your node will begin training automatically.
+
+You can verify that your peer has successfully connected by visiting the [Gensyn Testnet Dashboard](dashboard.gensyn.ai). Your peer should appear in the active swarm list, and you can monitor training progress in real time.
