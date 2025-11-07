@@ -48,27 +48,42 @@ chmod +x setup_gensyn_node.sh
 
 
 🟢 Running & Authentication
-* Follow Prompts: After setup, the script will prompt you to resume the tunnel screen. Do this in a new terminal window to get your public URL.
+* Follow Prompts: After setup, the script will prompt you to resume the tunnel screen. 
 
-```bash
-screen -r lt_tunnel
-```
-
-* Now use this command to get the password of this website
+* Use this command to get the password of this website
 ```bash
 curl https://loca.lt/mytunnelpassword
 ```
 
+* Do this in a new terminal window to get your public website URL.
+```bash
+screen -r lt_tunnel
+```
+
+
+
 * Authenticate: Visit the public URL in your browser and complete the Gensyn login.
 * Sign In using email address and then paste OTP
-
 * Check Status: Return to your original terminal. Once authenticated, your node will begin processing tasks in the background.
-* Respond to questions asked appropriately
-* `Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]` : Write N
-When you will see interface like this, you can detach from this screen session
-
 * To re-attach to your node's logs, use:
 ```bash
 screen -r gensyn
 ```
-Press Ctrl + A then D to detach safely.
+
+* Respond to questions asked appropriately
+* `Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]` : Write Y and enter your access-token to join testnet OR press N to join without pushing models
+* `Enter the name of the model you want to use in huggingface repo/name format, or press [Enter] to use the default model`: For default model, press Enter or choose one of these:
+  - Gensyn/Qwen2.5-0.5B-Instruct
+  - Qwen/Qwen3-0.6B
+  - nvidia/AceInstruct-1.5B
+  - dnotitia/Smoothie-Qwen3-1.7B
+  - Gensyn/Qwen2.5-1.5B-Instruct
+* `Would you like to participate in the AI Prediction Market? (Y/n)`
+You would join the prediction market by pressing ENTER or answering Y 
+
+
+* Press Ctrl + A then D to detach safely.
+* To resume `screen`
+```bash
+screen -r gensyn
+```
