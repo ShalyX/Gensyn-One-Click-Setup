@@ -71,7 +71,7 @@ screen -S "$SCREEN_NAME" -X quit > /dev/null 2>&1
 
 # Start the node and detach
 # The 'exec bash' keeps the screen session alive after the script finishes
-screen -dmS "$SCREEN_NAME" bash -c "source .venv/bin/activate; cd rl-swarm && ./run_rl_swarm.sh; exec bash"
+screen -dmS "$SCREEN_NAME" bash -c "cd $REPO_DIR; source .venv/bin/activate; export PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0; ./run_rl_swarm.sh; exec bash"
 
 log_success "Node started successfully in a detached screen session. You can re-attach using 'screen -r $SCREEN_NAME'."
 
